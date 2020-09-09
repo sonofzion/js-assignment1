@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        
+     cot = prompt('"Enter the corresponding number for your preffered choice" \n 1. Airtime-self \n 2. Airtime-others \n 3. purchase Data \n 4. Transfer')
+     cot = parseInt(cot)
+     if(cot==1) {
+        amount = prompt("please enter Amount")
+         if(amount<100) {
+             alert("minimum amount for recharge is 100")
+         }
+         else {
+             alert("your line has been successfuly recharged with " + amount + " naira")
+         }
+     }
+     else if (cot==2) {
+         phone = prompt("please enter recipient's mobile number")
+         airtime = prompt("please enter Amount")
+         network = prompt('"Enter the recipient mobile network" \n - Glo \n - Mtn \n - Airtel \n - 9mobile')
+         reply = prompt("Enter your pin or token code to top up " + phone + " on " + network + " with NGN " + airtime + " or enter 0 to cancel")
+        if(reply = 0) {
+            alert("transaction cancelled")
+        }
+        else{
+         alert("you have successfully recharged " + phone + " with NGN " + airtime)
+        }   
+            }
+     else if(cot==3) {
+         opt = prompt('"purchase data for: " \n 1.self \n 2. 3rd-party')
+         opt = parseInt(opt)
+         if(opt==1){
+             kb = prompt("Enter amount in KB")
+             conf = confirm("proceed?")
+             if (conf == true){
+             alert("you have successfully subscribed to " + kb + "kb")
+             }
+             else {
+                 alert("transaction cancelled")
+             }
+         }
+         else if(opt==2) {
+         phone = prompt("please enter recipient's mobile number")
+         data = prompt("please enter Amount in KB")
+         network = prompt('"Enter the recipient mobile network" \n - Glo \n - Mtn \n - Airtel \n - 9mobile')
+         reply = prompt("Enter your pin or token code to top up " + phone + " on " + network + " with kb " + data + " or enter 0 to cancel")
+            if(reply = 0){
+                alert("transaction cancelled")
+            }
+            else {
+                conf = confirm("proceed?")
+             if (conf == true){
+             alert("you have successfully recharged " + phone + " with KB " + data)
+             }
+             else {
+                 alert("transaction cancelled")
+             }
+                     }
+         }
+         else {
+             alert("you selected an invalid option")
+         }
+     }
+     else if(cot==4) {
+        opt = prompt('"Transfer to: " \n 1.GTB \n 2. Others')
+         opt = parseInt(opt)
+         if(opt==1){
+             amount = prompt("Enter amount")
+             account = prompt("Enter recipient's Account number")
+             reply = prompt("Enter your pin or token code to transfer " + amount + " to " + account +  " or enter 0 to cancel")
+            if(reply = 0){
+                alert("transaction cancelled")
+            }
+            else {
+             conf = confirm("proceed?")
+             if (conf == true){
+             alert("you have successfully transferred NGN" + amount + "to" + account)
+             }
+             else {
+                 alert("transaction cancelled")
+             }
+            }
+         }
+         else if(opt==2) {
+         prompt("Enter bank name")
+         account = prompt("please enter recipient's account number")
+         amount = prompt("please enter Amount in NGN")
+         reply = prompt("Enter your pin or token code to transfer " + amount + " to " + account +  " or enter 0 to cancel")
+            if(reply = 0){
+                alert("transaction cancelled")
+            }
+            else {
+                conf = confirm("proceed?")
+             if (conf == true){
+             alert("you have successfully transferred " + amount + " to " + account)
+             }
+             else {
+                 alert("transaction cancelled")
+             }
+                     }
+         }
+         else {
+             alert("you selected an invalid option")
+         }
+        
+     }
+     else{
+         alert("you selected an invalid option")
+     }
+
+    </script>
+</body>
+</html>
